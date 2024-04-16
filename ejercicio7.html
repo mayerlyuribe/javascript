@@ -8,36 +8,31 @@
 </head>
 <body>
     <script>
-        function calcularPromedioEstudiante() {
-    let nota1 = parseFloat(prompt("Ingrese la primera nota: "));
-    while (isNaN(nota1)) {
-        nota1 = parseFloat(prompt("Error: La nota debe ser un número. Ingrese nuevamente la primera nota: "));
-    }
+        let nota1, nota2, nota3;
 
-    let nota2 = parseFloat(prompt("Ingrese la segunda nota: "));
-    while (isNaN(nota2)) {
-        nota2 = parseFloat(prompt("Error: La nota debe ser un número. Ingrese nuevamente la segunda nota: "));
-    }
+    do {
+    nota1 = parseFloat(prompt("la primera nota: "));
+    } while (isNaN(nota1));
 
-    let nota3 = parseFloat(prompt("Ingrese la tercera nota: "));
-    while (isNaN(nota3)) {
-        nota3 = parseFloat(prompt("Error: La nota debe ser un número. Ingrese nuevamente la tercera nota: "));
-    }
+    do {
+    nota2 = parseFloat(prompt("la segunda nota: "));
+    } while (isNaN(nota2));
 
-    let promedio = (nota1 + nota2 + nota3) / 3;
+    do {
+    nota3 = parseFloat(prompt("la tercera nota: "));
+    } while (isNaN(nota3));
 
-    let resultado = `El promedio del estudiante es ${promedio}. `;
+    const promedio = (nota1 + nota2 + nota3) / 3;
+
+    let resultado = `el promedio es: ${promedio}. `;
 
     if (promedio < 3) {
-        resultado += "El estudiante está reprobado.";
+    resultado += "el estudiante está reprobado.";
     } else {
-        resultado += "El estudiante está aprobado.";
+    resultado += "el estudiante está aprobado.";
     }
 
-    console.log(resultado);
-    }
-
-calcularPromedioEstudiante();
+    alert(resultado);
 
     </script>
 </body>
